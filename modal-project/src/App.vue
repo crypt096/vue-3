@@ -1,23 +1,20 @@
 <template>
   <h1>{{ title }}</h1>
-  <input type="text" ref="name" />
-  <button @click="handleClick">Click me</button>
+  <Modal />
 </template>
 
 <script>
+import Modal from "./components/Modal";
+
 export default {
   name: "App",
+  components: {
+    Modal,
+  },
   data() {
     return {
       title: "Harry Potter and the Cursed Child",
     };
-  },
-  methods: {
-    handleClick() {
-      console.log(this.$refs.name.value);
-      this.$refs.name.classList.add("active");
-      this.$refs.name.focus();
-    },
   },
 };
 </script>
