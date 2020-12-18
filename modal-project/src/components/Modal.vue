@@ -5,6 +5,9 @@
       <div class="actions">
         <slot name="links"></slot>
       </div>
+      <div class="custom">
+        <slot name="alex"></slot>
+      </div>
     </div>
   </div>
 </template>

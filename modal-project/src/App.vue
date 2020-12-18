@@ -9,7 +9,16 @@
       </template>
     </Modal>
   </div>
+  <div v-if="showModalTwo">
+    <Modal theme="sale" @close="toggleModal2">
+      <template v-slot:alex>
+        <h1>I am the king</h1>
+        <p>Best programmer ever</p>
+      </template>
+    </Modal>
+  </div>
   <button @click="toggleModal">Open modal</button>
+  <button @click="toggleModal2">Open modal II</button>
 </template>
 
 <script>
@@ -26,11 +35,15 @@ export default {
       header: "Sign up for the giveaway!",
       text: "Grab your ninja swag for half price!",
       showModal: false,
+      showModalTwo: false,
     };
   },
   methods: {
     toggleModal() {
       this.showModal = !this.showModal;
+    },
+    toggleModal2() {
+      this.showModalTwo = !this.showModalTwo;
     },
   },
 };
